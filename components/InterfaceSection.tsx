@@ -57,7 +57,7 @@ export default function InterfaceSection() {
             <div className="relative  ">
               <div className="  h-80 w-full ">
                 <Image
-                  src="images\interface2.png"
+                  src="images/interface2.png"
                   alt="Mahendra Pennikin"
                   fill
                   className=" w-full object-contain"
@@ -67,7 +67,7 @@ export default function InterfaceSection() {
             <div className="relative  ">
               <div className="  h-80   w-full ">
                 <Image
-                  src="images\interface.png"
+                  src="images/interface.png"
                   alt="Mahendra Pennikin"
                   fill
                   className=" w-full h-52 object-contain"

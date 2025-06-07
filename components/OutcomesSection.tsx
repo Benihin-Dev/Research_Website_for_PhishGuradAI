@@ -1,25 +1,42 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Zap, Shield, CheckCircle } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
+import { FiTarget } from "react-icons/fi";
+import { GoZap } from "react-icons/go";
+import { FiShield } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
+
+// Custom Progress component to replace the potentially problematic import
+interface ProgressProps {
+  value: number;
+  className?: string;
+}
+
+const Progress = ({ value, className = "" }: ProgressProps) => (
+  <div className={`w-full bg-gray-200 rounded-full ${className}`}>
+    <div
+      className="bg-blue-600 h-full rounded-full transition-all duration-300"
+      style={{ width: `${value}%` }}
+    ></div>
+  </div>
+);
 
 export default function OutcomesSection() {
   const metrics = [
     {
       label: "Overall Accuracy",
       value: 89.2,
-      icon: Target,
+      icon: FiTarget,
       color: "text-green-600",
     },
     {
       label: "Precision",
       value: 92.1,
-      icon: CheckCircle,
+      icon: FiCheckCircle,
       color: "text-blue-600",
     },
-    { label: "Recall", value: 85.7, icon: Shield, color: "text-purple-600" },
-    { label: "F1-Score", value: 88.8, icon: Zap, color: "text-orange-600" },
+    { label: "Recall", value: 85.7, icon: FiShield, color: "text-purple-600" },
+    { label: "F1-Score", value: 88.8, icon: GoZap, color: "text-orange-600" },
   ];
 
   const features = [
@@ -36,22 +53,22 @@ export default function OutcomesSection() {
       title: "Real-time Processing",
       description:
         "Average response time under 500ms for instant threat detection",
-      icon: Zap,
+      icon: GoZap,
     },
     {
       title: "High Accuracy",
       description: "89.2% accuracy rate with minimal false positives",
-      icon: Target,
+      icon: FiTarget,
     },
     {
       title: "Scalable Architecture",
       description: "Can handle thousands of concurrent URL analysis requests",
-      icon: Shield,
+      icon: FiShield,
     },
     {
       title: "Adaptive Learning",
       description: "Continuously improves with new phishing patterns and data",
-      icon: CheckCircle,
+      icon: FiCheckCircle,
     },
   ];
 
@@ -181,7 +198,7 @@ export default function OutcomesSection() {
                 className="text-center"
               >
                 <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex flex-col items-center justify-center text-white mb-6">
-                  <Target className="h-16 w-16 mb-4" />
+                  <FiTarget className="h-16 w-16 mb-4" />
                   <div className="text-4xl font-bold">89.2%</div>
                   <div className="text-lg">Overall Accuracy</div>
                 </div>
