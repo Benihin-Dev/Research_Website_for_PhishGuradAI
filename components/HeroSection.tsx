@@ -85,7 +85,7 @@ export default function HeroSection() {
           </Link>
 
           <Link
-            href="https://phishguardai.vercel.app/"
+            href="https://drive.google.com/file/d/1_8uS_KRgXu1HWWYutf1YkA0ax5QKOokz/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             passHref
